@@ -77,100 +77,100 @@ is ON and then play a specific note until it's OFF:*/
  
     int finger1State = digitalRead(finger1);
     if (finger1State == 0 & finger1On == false) {
-      MIDI.sendNoteOn(60,60,1);
+      MIDI.sendNoteOn(62,60,1);
       finger1On = !finger1On; }
     if (finger1State > 0 & finger1On == true) {
-      MIDI.sendNoteOff(60,60,1);
+      MIDI.sendNoteOff(62,60,1);
       finger1On = !finger1On;}
     
     int finger2State = digitalRead(finger2);
     if (finger2State == 0 & finger2On == false) {
-      MIDI.sendNoteOn(62,60,1);
+      MIDI.sendNoteOn(66,60,1);
       finger2On = !finger2On; }
     if (finger2State > 0 & finger2On == true) {
-      MIDI.sendNoteOff(62,60,1);
+      MIDI.sendNoteOff(66,60,1);
       finger2On = !finger2On;}
     
     int finger3State = digitalRead(finger3);
     if (finger3State == 0 & finger3On == false) {
-      MIDI.sendNoteOn(64,60,1);
+      MIDI.sendNoteOn(69,60,1);
       finger3On = !finger3On; }
     if (finger3State > 0 & finger3On == true) {
-      MIDI.sendNoteOff(64,60,1);
+      MIDI.sendNoteOff(69,60,1);
       finger3On = !finger3On;}
     
     int finger4State = digitalRead(finger4);
     if (finger4State == 0 & finger4On == false) {
-      MIDI.sendNoteOn(65,60,1);
+      MIDI.sendNoteOn(71,60,1);
       finger4On = !finger4On; }
     if (finger4State > 0 & finger4On == true) {
-      MIDI.sendNoteOff(65,60,1);
+      MIDI.sendNoteOff(71,60,1);
       finger4On = !finger4On;}
     
-    int finger5State = digitalRead(finger5);
-    if (finger5State == 0 & finger5On == false) {
-      MIDI.sendNoteOn(66,60,1);
-      finger5On = !finger5On; }
-    if (finger5State > 0 & finger5On == true) {
-      MIDI.sendNoteOff(66,60,1);
-      finger5On = !finger5On;}
-     
-    int finger6State = digitalRead(finger6);
-    if (finger6State == 0 & finger6On == false) {
-      MIDI.sendNoteOn(67,60,1);
-      finger6On = !finger6On; }
-    if (finger6State > 0 & finger6On == true) {
-      MIDI.sendNoteOff(67,60,1);
-      finger6On = !finger6On;}
-    
-    int finger7State = digitalRead(finger7);
-    if (finger7State == 0 & finger7On == false) {
-      MIDI.sendNoteOn(69,60,1);
-      finger7On = !finger7On; }
-    if (finger7State > 0 & finger7On == true) {
-      MIDI.sendNoteOff(69,60,1);
-      finger7On = !finger7On;}
-    
-    int finger8State = digitalRead(finger8);
-    if (finger8State == 0 & finger8On == false) {
-      MIDI.sendNoteOn(71,60,1);
-      finger8On = !finger8On; }
-    if (finger8State > 0 & finger8On == true) {
-      MIDI.sendNoteOff(71,60,1);
-      finger8On = !finger8On;}
+//    int finger5State = digitalRead(finger5);
+//    if (finger5State == 0 & finger5On == false) {
+//      MIDI.sendNoteOn(66,60,1);
+//      finger5On = !finger5On; }
+//    if (finger5State > 0 & finger5On == true) {
+//      MIDI.sendNoteOff(66,60,1);
+//      finger5On = !finger5On;}
+//     
+//    int finger6State = digitalRead(finger6);
+//    if (finger6State == 0 & finger6On == false) {
+//      MIDI.sendNoteOn(67,60,1);
+//      finger6On = !finger6On; }
+//    if (finger6State > 0 & finger6On == true) {
+//      MIDI.sendNoteOff(67,60,1);
+//      finger6On = !finger6On;}
+//    
+//    int finger7State = digitalRead(finger7);
+//    if (finger7State == 0 & finger7On == false) {
+//      MIDI.sendNoteOn(69,60,1);
+//      finger7On = !finger7On; }
+//    if (finger7State > 0 & finger7On == true) {
+//      MIDI.sendNoteOff(69,60,1);
+//      finger7On = !finger7On;}
+//    
+//    int finger8State = digitalRead(finger8);
+//    if (finger8State == 0 & finger8On == false) {
+//      MIDI.sendNoteOn(71,60,1);
+//      finger8On = !finger8On; }
+//    if (finger8State > 0 & finger8On == true) {
+//      MIDI.sendNoteOff(71,60,1);
+//      finger8On = !finger8On;}
       
     // phalanges: 
     
     int finger2phState = digitalRead(finger2ph);
     if (finger2phState == 0 & finger2phOn == false) {
-      MIDI.sendNoteOn(61,60,1);
+      MIDI.sendNoteOn(64,60,1);
       finger2phOn = !finger2phOn; }
     if (finger2phState > 0 & finger2phOn ==   true) {
-      MIDI.sendNoteOff(61,60,1);
+      MIDI.sendNoteOff(64,60,1);
       finger2phOn = !finger2phOn;}
      
     int finger3phState = digitalRead(finger3ph);
     if (finger3phState == 0 & finger3phOn == false) {
-      MIDI.sendNoteOn(63,60,1);
+      MIDI.sendNoteOn(67,60,1);
       finger3phOn = !finger3phOn; }
     if (finger3phState > 0 & finger3phOn == true) {
-      MIDI.sendNoteOff(63,60,1);
+      MIDI.sendNoteOff(67,60,1);
       finger3phOn = !finger3phOn;}
     
-    int finger6phState = digitalRead(finger6ph);
-    if (finger6phState == 0 & finger6phOn == false) {
-      MIDI.sendNoteOn(68,60,1);
-      finger6phOn = !finger6phOn; }
-    if (finger6phState > 0 & finger6phOn == true) {
-      MIDI.sendNoteOff(68,60,1);
-      finger6phOn = !finger6phOn;}
-    
-    int finger7phState = digitalRead(finger7ph);
-    if (finger7phState == 0 & finger7phOn == false) {
-      MIDI.sendNoteOn(70,60,1);
-      finger7phOn = !finger7phOn; }
-    if (finger7phState > 0 & finger7phOn == true) {
-      MIDI.sendNoteOff(70,60,1);
-      finger7phOn = !finger7phOn;}
+//    int finger6phState = digitalRead(finger6ph);
+//    if (finger6phState == 0 & finger6phOn == false) {
+//      MIDI.sendNoteOn(68,60,1);
+//      finger6phOn = !finger6phOn; }
+//    if (finger6phState > 0 & finger6phOn == true) {
+//      MIDI.sendNoteOff(68,60,1);
+//      finger6phOn = !finger6phOn;}
+//    
+//    int finger7phState = digitalRead(finger7ph);
+//    if (finger7phState == 0 & finger7phOn == false) {
+//      MIDI.sendNoteOn(70,60,1);
+//      finger7phOn = !finger7phOn; }
+//    if (finger7phState > 0 & finger7phOn == true) {
+//      MIDI.sendNoteOff(70,60,1);
+//      finger7phOn = !finger7phOn;}
 
 }
