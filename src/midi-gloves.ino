@@ -15,8 +15,8 @@ int finger8 = 9;
 
 // phalanges will be used for musical accidents:
 
-int finger1ph = 10;
-int finger2ph = 11;
+int finger2ph = 10;
+int finger3ph = 11;
 int finger6ph = 12;
 int finger7ph = 13;
 
@@ -31,8 +31,8 @@ boolean finger6On = false;
 boolean finger7On = false;
 boolean finger8On = false;
 
-boolean finger1phOn = false;
 boolean finger2phOn = false;
+boolean finger3phOn = false;
 boolean finger6phOn = false;
 boolean finger7phOn = false;
 
@@ -59,10 +59,10 @@ void setup() {
     pinMode(finger8, INPUT);
     digitalWrite(finger8, HIGH);
     
-    pinMode(finger1ph, INPUT);
-    digitalWrite(finger1ph, HIGH);  
     pinMode(finger2ph, INPUT);
     digitalWrite(finger2ph, HIGH);  
+    pinMode(finger3ph, INPUT);
+    digitalWrite(finger3ph, HIGH);  
     pinMode(finger6ph, INPUT);
     digitalWrite(finger6ph, HIGH);  
     pinMode(finger7ph, INPUT);
@@ -141,21 +141,21 @@ is ON and then play a specific note until it's OFF:*/
       
     // phalanges: 
     
-    int finger1phState = digitalRead(finger1ph);
-    if (finger1phState == 0 & finger1phOn == false) {
-      MIDI.sendNoteOn(61,60,1);
-      finger1phOn = !finger1phOn; }
-    if (finger1phState > 0 & finger1phOn ==   true) {
-      MIDI.sendNoteOff(61,60,1);
-      finger1phOn = !finger1phOn;}
-     
     int finger2phState = digitalRead(finger2ph);
     if (finger2phState == 0 & finger2phOn == false) {
-      MIDI.sendNoteOn(63,60,1);
+      MIDI.sendNoteOn(61,60,1);
       finger2phOn = !finger2phOn; }
-    if (finger2phState > 0 & finger2phOn == true) {
-      MIDI.sendNoteOff(63,60,1);
+    if (finger2phState > 0 & finger2phOn ==   true) {
+      MIDI.sendNoteOff(61,60,1);
       finger2phOn = !finger2phOn;}
+     
+    int finger3phState = digitalRead(finger3ph);
+    if (finger3phState == 0 & finger3phOn == false) {
+      MIDI.sendNoteOn(63,60,1);
+      finger3phOn = !finger3phOn; }
+    if (finger3phState > 0 & finger3phOn == true) {
+      MIDI.sendNoteOff(63,60,1);
+      finger3phOn = !finger3phOn;}
     
     int finger6phState = digitalRead(finger6ph);
     if (finger6phState == 0 & finger6phOn == false) {
